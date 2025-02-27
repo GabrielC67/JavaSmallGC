@@ -1,0 +1,83 @@
+while (i <= 10) { System.out.println(i); i++;}
+printNumbers();
+System.out.println("Change applied");
+sumNumbers(13);
+sumNumbersTo13(13);
+addTwoNumbers(5, 7);
+addTwoNumbers(8, 33);
+addTwoNumbers(5, 10);
+while (i <= 10) { System.out.println(i); i++;}
+printNumbers();
+System.out.println("Change applied");
+sumNumbers(13);
+sumNumbersTo13(13);
+sumNumbersTo13(13);
+divideTwoNumbers(18, 3);
+multiplyTwoNumbers (32, 12);
+subtractTwoNumbers (99, 23);
+isEven(5)
+while (i <= 10) { System.out.println(i); i++;}
+printNumbers();
+System.out.println("Change applied");
+sumNumbers(13);
+sumNumbersTo13(13);
+int addTwoNumbers(int x, int y){ int sum = 0; return sum = x + y;}
+addTwoNumbers(5, 7);
+addTwoNumbers(8, 33);
+addTwoNumbers(5, 10);
+int divideTwoNumbers (int x, int y){ return x / y; }
+int multiplyTwoNumbers (int x, int y) { return x * y; }
+int subtractTwoNumbers (int x, int y) { return x - y; }
+while (i <= 10) { System.out.println(i); i++;}
+void printNumbers(){ int i = 1; while (i <= 10) { System.out.println(i); i++;}}
+printNumbers();
+int sumNumbers(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+    return sum;
+}
+int sumNumbersTo10(){return sumNumbers(10);}
+System.out.println("Change applied");
+sumNumbers(13);
+int sumNumbersTo13(int n){ int sum = 0; for(i = 1; i <= 13; i++){ sum = sum + i;} return sum;}
+sumNumbersTo13(13);
+sumNumbersTo13(13);
+divideTwoNumbers(18, 3);
+multiplyTwoNumbers (32, 12);
+subtractTwoNumbers (99, 23);
+isEven(5);
+isEven(6);
+boolean isEven(int x) {
+	if(x % 2 == 0){
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+isEven(5);
+isEven(66);
+isEven(65);
+isOdd(4)
+isOdd(9);
+boolean isOdd(int x) {
+	if(x % 2 == 0){
+		return false;
+	}
+	else {
+		return true;
+	}
+
+}
+isOdd(6);
+isOdd(11);
+isOdd(5);
+var x = 5;
+
+var y = 2;
+
+x % y
+int i = 1;
+ while ( i <= 10){ System.out.println(i + " % 2 = " + i % 2); i++;}

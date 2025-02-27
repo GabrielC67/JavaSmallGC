@@ -173,8 +173,7 @@ and **invoke** the method by typing `sumNumbersTo10();` and then `return` key.
 ### Use jshell to load the code from a file
 
 ```java
-/open sumNumbers.java
-```
+j```
 
 ### Use jshell to edit the code
 
@@ -339,7 +338,7 @@ void printOddEven() {
 }
 ```
 
-see the `else` part? what if you remove it?
+see the `else` part? what if you remove it?pri
 (puzzle over it in your mind. c'mon experiment!)
 
 Now TYPE it into `jshell`.
