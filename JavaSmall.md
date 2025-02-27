@@ -354,4 +354,4 @@ git commit -m "done with jshell and JavaSmall"
 git push
 ```
 
-Now, switch to `VARS.md` and learn about variables in Java.
+Now, switch to `` and learn about variables in Java.
