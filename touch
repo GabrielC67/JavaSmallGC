@@ -1,0 +1,445 @@
+Last login: Thu Feb 27 17:13:28 on ttys000
+gabe@Zipcoders-MacBook-Pro-18 ~ % ls
+Applications	Desktop		Dev		Documents	Downloads	IdeaProjects	Library		Movies		Music		Pictures	Postman		Projects	Public		SSH
+gabe@Zipcoders-MacBook-Pro-18 ~ % cd Projects
+gabe@Zipcoders-MacBook-Pro-18 Projects % ls
+DreamHouse2024GC	Hello.class		Markdown101GC		NanoEditorGC		SumOfInputGC		myfile.txt		myfile2			myfile3			myfile5			simple.md
+Gabriel			JavaSmallGC		MyFirstFork		StringEx2GC		Yowza.jsh		myfile1			myfile2.txt		myfile4			myfile6
+gabe@Zipcoders-MacBook-Pro-18 Projects % cd JavaSmallGC
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % ls
+ClassPerson.md	JavaSmall.md	LICENSE		README.md	VARS.md		helloworld.java	sumNumbers.java	sumNumbers.jave	vars.jsh
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % /open ClassPerson.md
+zsh: no such file or directory: /open
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % \open ClassPerson.md
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % jshell
+|  Welcome to JShell -- Version 17.0.14
+|  For an introduction type: /help intro
+
+jshell> class Car {
+   ...>     int year;
+   ...>     String make;
+   ...>     String model;
+   ...> }
+|  created class Car
+
+jshell> class Car {
+   ...>     int year;
+   ...>     String make;
+   ...>     String model;
+   ...>     
+   ...>     Car(int y, String m, String mod) {
+   ...>         year = y;
+   ...>         make = m;
+   ...>         model = mod;
+   ...>     }
+   ...> }
+|  replaced class Car
+
+jshell> Car car1 = new Car(1967, "Nissan", "Hakosuka Skyline");
+car1 ==> Car@34c45dca
+
+jshell> Car car2 = new Car(1991, "Mazda", "RX-7");
+car2 ==> Car@5b6f7412
+
+jshell> car1.year
+$5 ==> 1967
+
+jshell> car1.make
+$6 ==> "Nissan"
+
+jshell> car1.model
+$7 ==> "Hakosuka Skyline"
+
+jshell> car2.year
+$8 ==> 1991
+
+jshell> car2.make
+$9 ==> "Mazda"
+
+jshell> car2.model
+$10 ==> "RX-7"
+
+jshell> class Car {
+   ...>     int year;
+   ...>     String make;
+   ...>     String model;
+   ...>     
+   ...>     Car(int y, String m, String mod){
+   ...>         year = y
+jshell> class Car {
+   ...>     int year;
+   ...>     String make;
+   ...>     String model;
+   ...>     
+   ...>     Car(int y, String m, String mod){
+   ...>         year = y;
+   ...>         make = m;
+   ...>         model = mod;
+   ...>     }
+   ...>     
+   ...>     void myDreamCar() {
+   ...>         System.out.println("My dream car is the " + year + make + model + ".");
+   ...>     }
+   ...> }
+|  replaced class Car
+|    update replaced variable car1, reset to null
+|    update replaced variable car2, reset to null
+
+jshell> Car car1 = new Car(1967, "Nissan", "Hakosuka Skyline");
+car1 ==> Car@79fc0f2f
+
+jshell> Car car2 = new Car (1991, "Mazda", "RX-7");
+car2 ==> Car@50040f0c
+
+jshell> car1.myDreamCar()
+My dream car is the 1967NissanHakosuka Skyline.
+
+jshell> \edit
+|  Error:
+|  illegal character: '\'
+|  \edit
+|  ^
+|  Error:
+|  reached end of file while parsing
+|  \edit
+|       ^
+
+jshell> /edit
+2025-02-27 18:19:13.551 jshell[24450:1352823] +[IMKClient subclass]: chose IMKClient_Modern
+2025-02-27 18:19:13.551 jshell[24450:1352823] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+|  modified class Car
+
+jshell> car1.myDreamCar();
+My dream car is the 1967 Nissan Hakosuka Skyline.
+
+jshell> car2.myDreamCar();
+My dream car is the 1991 Mazda RX-7.
+
+jshell> /vars
+|    int $5 = 1967
+|    String $6 = "Nissan"
+|    String $7 = "Hakosuka Skyline"
+|    int $8 = 1991
+|    String $9 = "Mazda"
+|    String $10 = "RX-7"
+|    Car car1 = Car@79fc0f2f
+|    Car car2 = Car@50040f0c
+
+jshell> methods Car
+|  created variable Car, however, it cannot be referenced until class methods is declared
+
+jshell> /list
+
+   5 : car1.year
+   6 : car1.make
+   7 : car1.model
+   8 : car2.year
+   9 : car2.make
+  10 : car2.model
+  12 : Car car1 = new Car(1967, "Nissan", "Hakosuka Skyline");
+  13 : Car car2 = new Car (1991, "Mazda", "RX-7");
+  14 : car1.myDreamCar()
+  15 : class Car {
+           int year;
+           String make;
+           String model;
+           
+           Car(int y, String m, String mod){
+               year = y;
+               make = m;
+               model = mod;
+           }
+           
+           void myDreamCar() {
+               System.out.println("My dream car is the " + year + " " + make + " " + model + ".");
+           }
+       }
+  16 : car1.myDreamCar();
+  17 : car2.myDreamCar();
+  18 : methods Car;
+
+jshell> class Person {
+   ...>     String name;
+   ...>     int age;
+   ...> }
+|  created class Person
+
+jshell> class Person {
+   ...>     String name;
+   ...>     int age;
+   ...>     
+   ...>     Person(String n, int a) {
+   ...>         name = n;
+   ...>         age = a;
+   ...>     }
+   ...> }
+|  replaced class Person
+
+jshell> person1.name
+|  Error:
+|  cannot find symbol
+|    symbol:   variable person1
+|  person1.name
+|  ^-----^
+
+jshell> Person person1 = new Person("Alice", 25);
+person1 ==> Person@37bba400
+
+jshell> Person person2 = new Person("Bob", 30);
+person2 ==> Person@254989ff
+
+jshell> person1.name
+$23 ==> "Alice"
+
+jshell> person1.age
+$24 ==> 25
+
+jshell> person2.name
+$25 ==> "Bob"
+
+jshell> person2.age
+$26 ==> 30
+
+jshell> class Person {
+   ...>     String = name;
+   ...>     int age;
+   ...>     
+   ...>     Person(String n, int a) {
+   ...>         name = n;
+   ...>         age = a;
+   ...>     }
+   ...>     
+   ...>     void sayHello() {
+   ...>         System.out.println("Hello my name is " + name);
+   ...>     }
+   ...>     
+   ...>     void haveBirthday() {
+   ...>         System.out.println("Happy Birthday! " + name + " is now " + age);
+   ...>     }
+   ...> }
+|  Error:
+|  <identifier> expected
+|      String = name;
+|            ^
+
+jshell> class Person {        String name;
+   ...>         int age;
+   ...>         
+   ...>         Person(String n, int a) {
+   ...>             name = n;
+   ...>             age = a;
+   ...>         }
+   ...>         
+   ...>         void sayHello() {
+   ...>             System.out.println("Hello my name is " + name);
+   ...>         }
+   ...>         
+   ...>         void haveBirthday() {
+   ...>             System.out.println("Happy Birthday! " + name + " is now " + age);
+   ...>         }
+   ...>     }
+   ...> 
+|  replaced class Person
+|    update replaced variable person1, reset to null
+|    update replaced variable person2, reset to null
+
+jshell> Person person1 = new Person("Alice", 25);
+person1 ==> Person@5010be6
+
+jshell> Person person2 = new Person ("Bob", 30);
+person2 ==> Person@685f4c2e
+
+jshell> /save
+|  '/save' requires a filename argument.
+
+jshell> Person person = new Person("John", 17);
+person ==> Person@2e5d6d97
+
+jshell> person.printDetails();
+|  Error:
+|  cannot find symbol
+|    symbol:   method printDetails()
+|  person.printDetails();
+|  ^-----------------^
+
+jshell> class Person {
+   ...>     String name;
+   ...>     int age;
+   ...>     
+   ...>     Person(String n, int a) {
+   ...>         name = n;
+   ...>         age = a;
+   ...>     }
+   ...>     
+   ...>     void printDetails() {
+   ...>         System.out.println("Name: " + name);
+   ...>         System.out.println("Age: " + age);
+   ...>     }
+   ...>     
+   ...>     boolean isAdult() {
+   ...>         return age >= 18;
+   ...>     }
+   ...>     
+   ...>     void haveBirthday() {
+   ...>         age = age + 1;
+   ...>         System.out.println("Happy Birthday! " + name + " is now " + age);
+   ...>     }
+   ...> }
+|  replaced class Person
+|    update replaced variable person, reset to null
+|    update replaced variable person1, reset to null
+|    update replaced variable person2, reset to null
+
+jshell> Person person1 = new Person("Alice", 25);
+person1 ==> Person@6267c3bb
+
+jshell> Person person2 = new Person("Bob", 30);
+person2 ==> Person@533ddba
+
+jshell> Person person = new Person("John", 17);
+person ==> Person@246b179d
+
+jshell> person.printDetails();
+Name: John
+Age: 17
+
+jshell> person1.printDetails();
+Name: Alice
+Age: 25
+
+jshell> person2.printDetails();
+Name: Bob
+Age: 30
+
+jshell> System.out.println(person.isAdult());
+false
+
+jshell> System.out.println(person1.isAdult());
+true
+
+jshell> System.out.println(person2.isAdult());
+true
+
+jshell> person.haveBirthday();
+Happy Birthday! John is now 18
+
+jshell> person2.haveBirthday();
+Happy Birthday! Bob is now 31
+
+jshell> person1.haveBirthday();
+Happy Birthday! Alice is now 26
+
+jshell> System.out.println(person.isAdult());
+true
+
+jshell> 
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % /save
+zsh: no such file or directory: /save
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % jshell
+|  Welcome to JShell -- Version 17.0.14
+|  For an introduction type: /help intro
+
+jshell> /edit
+2025-02-27 18:43:05.415 jshell[24740:1363644] +[IMKClient subclass]: chose IMKClient_Modern
+2025-02-27 18:43:05.415 jshell[24740:1363644] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+|  Error:
+|  illegal start of type
+|     ...>     int year;
+|     ^
+|  Error:
+|  illegal start of type
+|     ...>     String make;
+|     ^
+|  Error:
+|  illegal start of type
+|     ...>     String model;
+|     ^
+|  Error:
+|  illegal start of type
+|     ...> }
+|     ^
+
+jshell> class Car {
+   ...>        ...>     int year;
+   ...>        ...>     String make;
+   ...>        ...>     String model;
+   ...>        ...>     
+   ...>        ...>     Car(int y, String m, String mod) {
+   ...>            ...>         year = y;
+   ...>            ...>         make = m;
+   ...>            ...>         model = mod;
+   ...>            ...> }
+   ...>        ...>}
+|  Error:
+|  illegal start of type
+|         ...>     int year;
+|         ^
+|  Error:
+|  illegal start of type
+|         ...>     String make;
+|         ^
+|  Error:
+|  illegal start of type
+|         ...>     String model;
+|         ^
+|  Error:
+|  illegal start of type
+|         ...>     
+|         ^
+|  Error:
+|  illegal start of expression
+|             ...>         year = y;
+|             ^
+|  Error:
+|  illegal start of expression
+|             ...>         make = m;
+|             ^
+|  Error:
+|  illegal start of expression
+|             ...>         model = mod;
+|             ^
+|  Error:
+|  illegal start of expression
+|             ...> }
+|             ^
+|  Error:
+|  illegal start of type
+|         ...>}
+|         ^
+
+jshell> /save
+|  '/save' requires a filename argument.
+
+jshell> save Person.jsh
+|  Error:
+|  ';' expected
+|  save Person.jsh;
+|             ^
+
+jshell> /save Person.jsh
+
+jshell> 
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % git add .
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % git commit -m "Add Person class work"
+[main c4c0dcf] Add Person class work
+ 2 files changed, 1 insertion(+)
+ create mode 100644 Person.jsh
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 345 bytes | 345.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/GabrielC67/JavaSmallGC.git
+   5eef185..c4c0dcf  main -> main
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % /save touch finished.txt
+zsh: no such file or directory: /save
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % \save touch finished.txt
+zsh: command not found: save
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % /save touchfinished.txt
+zsh: no such file or directory: /save
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % nano touch finished.txt
+gabe@Zipcoders-MacBook-Pro-18 JavaSmallGC % 
+
